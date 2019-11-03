@@ -5,7 +5,8 @@
 //  Created by Mathias Claassen on 3/15/18.
 //  Copyright © 2018 Xmartlabs. All rights reserved.
 //
-
+import Foundation
+import UIKit
 import Eureka
 
 class CustomDesignController: FormViewController {

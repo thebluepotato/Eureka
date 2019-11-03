@@ -5,7 +5,7 @@
 //  Created by Mathias Claassen on 3/15/18.
 //  Copyright © 2018 Xmartlabs. All rights reserved.
 //
-
+import UIKit
 import Eureka
 
 class NativeEventNavigationController: UINavigationController, RowControllerType {

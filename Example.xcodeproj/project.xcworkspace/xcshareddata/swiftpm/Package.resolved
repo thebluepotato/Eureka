@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PackageResourcer",
+        "repositoryURL": "https://github.com/fr3qfly/PackageResourcer",
+        "state": {
+          "branch": null,
+          "revision": "ac2cbde788736fc35f1ceeb4a097edfd6846c5ce",
+          "version": "1.0.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
