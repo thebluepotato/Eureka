@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1BBB09DD236EFD1C00CAE3E7 /* Eureka in Frameworks */ = {isa = PBXBuildFile; productRef = 1BBB09DC236EFD1C00CAE3E7 /* Eureka */; };
 		2837E2A01BA3A5A800A1952C /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2837E29E1BA3A5A800A1952C /* FloatLabelTextField.swift */; };
 		284D28B61E49121E00BB38E7 /* DatePickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D28B51E49121E00BB38E7 /* DatePickerCell.xib */; };
 		284D28B81E4917A000BB38E7 /* SwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 284D28B71E4917A000BB38E7 /* SwitchCell.xib */; };
@@ -14,8 +15,6 @@
 		285F2B441BB79B86005991BA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 285F2B431BB79B86005991BA /* MapKit.framework */; };
 		287A143F1D99A96100FFE6EB /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A143D1D99A96100FFE6EB /* ImagePickerController.swift */; };
 		287A14401D99A96100FFE6EB /* ImageRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A143E1D99A96100FFE6EB /* ImageRow.swift */; };
-		28C777241BA14A52000ED936 /* Eureka.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51729E471B9A5841004A00EB /* Eureka.framework */; };
-		28C777251BA14A52000ED936 /* Eureka.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 51729E471B9A5841004A00EB /* Eureka.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		28CD97C21BB32F0E00AFDA67 /* EurekaSectionHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28CD97C01BB32F0E00AFDA67 /* EurekaSectionHeader.xib */; };
 		28E8554C1B9EA46F004E5189 /* FieldRowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E8554A1B9EA400004E5189 /* FieldRowUITests.swift */; };
 		51729E1E1B9A54F1004A00EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51729E1D1B9A54F1004A00EB /* AppDelegate.swift */; };
@@ -44,40 +43,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		28C777261BA14A52000ED936 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51729E411B9A5841004A00EB /* Eureka.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 51729DEA1B9A4F5E004A00EB;
-			remoteInfo = Eureka;
-		};
 		51729E2F1B9A54F1004A00EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 51729E121B9A54F1004A00EB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 51729E191B9A54F1004A00EB;
 			remoteInfo = Example;
-		};
-		51729E461B9A5841004A00EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51729E411B9A5841004A00EB /* Eureka.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 51729DEB1B9A4F5E004A00EB;
-			remoteInfo = Eureka;
-		};
-		51729E481B9A5841004A00EB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51729E411B9A5841004A00EB /* Eureka.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 51729DF51B9A4F5E004A00EB;
-			remoteInfo = EurekaTests;
-		};
-		BF4298981BA0997D001D107B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 51729E411B9A5841004A00EB /* Eureka.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 51729DEA1B9A4F5E004A00EB;
-			remoteInfo = Eureka;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -88,7 +59,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				28C777251BA14A52000ED936 /* Eureka.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,6 +66,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1BBB09DA236EFCF200CAE3E7 /* Eureka */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Eureka; sourceTree = "<group>"; };
 		2837E29E1BA3A5A800A1952C /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = FloatLabelTextField.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		284D28B51E49121E00BB38E7 /* DatePickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = DatePickerCell.xib; path = Example/CustomDesign/DatePickerCell.xib; sourceTree = "<group>"; };
 		284D28B71E4917A000BB38E7 /* SwitchCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SwitchCell.xib; path = Example/CustomDesign/SwitchCell.xib; sourceTree = "<group>"; };
@@ -114,7 +85,6 @@
 		51729E291B9A54F1004A00EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Example/Info.plist; sourceTree = "<group>"; };
 		51729E2E1B9A54F1004A00EB /* ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51729E341B9A54F1004A00EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Example/UITests/Info.plist; sourceTree = "<group>"; };
-		51729E411B9A5841004A00EB /* Eureka.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Eureka.xcodeproj; sourceTree = "<group>"; };
 		51729E6D1B9A6601004A00EB /* CustomCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = CustomCells.swift; path = Example/CustomCells.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		51729E701B9A660A004A00EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Example/Base.lproj/WeekDaysCell.xib; sourceTree = "<group>"; };
 		8F32504E205AAA93006AF0A6 /* RowsExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowsExample.swift; sourceTree = "<group>"; };
@@ -141,7 +111,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				285F2B441BB79B86005991BA /* MapKit.framework in Frameworks */,
-				28C777241BA14A52000ED936 /* Eureka.framework in Frameworks */,
+				1BBB09DD236EFD1C00CAE3E7 /* Eureka in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +125,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BBB09DB236EFD1C00CAE3E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2837E29D1BA3A5A800A1952C /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +154,7 @@
 		285F2B451BB79BB7005991BA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BBB09DA236EFCF200CAE3E7 /* Eureka */,
 				285F2B431BB79B86005991BA /* MapKit.framework */,
 			);
 			name = "Supporting Files";
@@ -206,7 +184,7 @@
 				51729E311B9A54F1004A00EB /* UITests */,
 				51729E1B1B9A54F1004A00EB /* Products */,
 				285F2B451BB79BB7005991BA /* Supporting Files */,
-				51729E411B9A5841004A00EB /* Eureka.xcodeproj */,
+				1BBB09DB236EFD1C00CAE3E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -244,15 +222,6 @@
 			);
 			name = UITests;
 			path = Example/UITests;
-			sourceTree = "<group>";
-		};
-		51729E421B9A5841004A00EB /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				51729E471B9A5841004A00EB /* Eureka.framework */,
-				51729E491B9A5841004A00EB /* EurekaTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		51729E6A1B9A657E004A00EB /* Custom Row and Cell */ = {
@@ -305,10 +274,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				BF4298991BA0997D001D107B /* PBXTargetDependency */,
-				28C777271BA14A52000ED936 /* PBXTargetDependency */,
 			);
 			name = Example;
+			packageProductDependencies = (
+				1BBB09DC236EFD1C00CAE3E7 /* Eureka */,
+			);
 			productName = Example;
 			productReference = 51729E1A1B9A54F1004A00EB /* Example.app */;
 			productType = "com.apple.product-type.application";
@@ -363,12 +333,6 @@
 			mainGroup = 51729E111B9A54F1004A00EB;
 			productRefGroup = 51729E1B1B9A54F1004A00EB /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 51729E421B9A5841004A00EB /* Products */;
-					ProjectRef = 51729E411B9A5841004A00EB /* Eureka.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				51729E191B9A54F1004A00EB /* Example */,
@@ -376,23 +340,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		51729E471B9A5841004A00EB /* Eureka.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Eureka.framework;
-			remoteRef = 51729E461B9A5841004A00EB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		51729E491B9A5841004A00EB /* EurekaTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = EurekaTests.xctest;
-			remoteRef = 51729E481B9A5841004A00EB /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		51729E181B9A54F1004A00EB /* Resources */ = {
@@ -460,20 +407,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		28C777271BA14A52000ED936 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Eureka;
-			targetProxy = 28C777261BA14A52000ED936 /* PBXContainerItemProxy */;
-		};
 		51729E301B9A54F1004A00EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 51729E191B9A54F1004A00EB /* Example */;
 			targetProxy = 51729E2F1B9A54F1004A00EB /* PBXContainerItemProxy */;
-		};
-		BF4298991BA0997D001D107B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Eureka;
-			targetProxy = BF4298981BA0997D001D107B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -629,7 +566,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -650,11 +590,15 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Example/Example/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -665,7 +609,11 @@
 			buildSettings = {
 				INFOPLIST_FILE = Example/UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -679,10 +627,15 @@
 			buildSettings = {
 				INFOPLIST_FILE = Example/UITests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xmartlabs.ExampleUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Example;
 				USES_XCTRUNNER = YES;
@@ -720,6 +673,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1BBB09DC236EFD1C00CAE3E7 /* Eureka */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Eureka;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 51729E121B9A54F1004A00EB /* Project object */;
 }

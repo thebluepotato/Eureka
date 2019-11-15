@@ -24,6 +24,9 @@
 
 import Foundation
 import UIKit
+#if canImport(PackageResourcer)
+import PackageResourcer
+#endif
 
 public protocol NavigationAccessory {
     var doneClosure: (() -> ())? { get set }
@@ -41,6 +44,8 @@ open class NavigationAccessoryView: UIToolbar, NavigationAccessory {
     open var doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(didTapDone))
     private var fixedSpace = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
     private var flexibleSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+    
+    private var resourcer: PackageResourcer?
 
     public override init(frame: CGRect) {
         super.init(frame: CGRect(x: 0, y: 0, width: frame.size.width, height: 44.0))
@@ -60,8 +65,18 @@ open class NavigationAccessoryView: UIToolbar, NavigationAccessory {
             if let resourcesBundle = Bundle(path: resourcePath) {
                 bundle = resourcesBundle
             }
+        } else {
+            #if canImport(PackageResourcer)
+            resourcer = try? PackageResourcer(urls: PackageResourcer.assetURLs)
+            resourcer?.delegate = self
+            resourcer?.process()
+            #endif
         }
 
+        initializeChevrons(from: bundle)
+    }
+    
+    private func initializeChevrons(from bundle: Bundle) {
         var imageLeftChevron = UIImage(named: "back-chevron", in: bundle, compatibleWith: nil)
         var imageRightChevron = UIImage(named: "forward-chevron", in: bundle, compatibleWith: nil)
         // RTL language support
@@ -96,7 +111,7 @@ open class NavigationAccessoryView: UIToolbar, NavigationAccessory {
             return previousButton.isEnabled
         }
         set {
-            previousButton.isEnabled = previousEnabled
+            previousButton.isEnabled = newValue
         }
     }
 
@@ -105,7 +120,47 @@ open class NavigationAccessoryView: UIToolbar, NavigationAccessory {
             return nextButton.isEnabled
         }
         set {
-            nextButton.isEnabled = nextEnabled
+            nextButton.isEnabled = newValue
         }
     }
 }
+
+#if canImport(PackageResourcer)
+
+extension NavigationAccessoryView: PackageResourcerDelegate {
+    public func finishedResourcing(_ resourcer: PackageResourcer) {
+        initializeChevrons(from: resourcer.bundle)
+    }
+    
+    public func packageResourcer(_ resourcer: PackageResourcer, finishedResourcingWithErrors: [String : Error]) {
+        initializeChevrons(from: resourcer.bundle)
+    }
+}
+
+extension PackageResourcer {
+    static var assetURLs: [String: URL]  {
+        let urls: [URL] = [
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/forward-chevron%401x.png",
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/forward-chevron%402x.png",
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/forward-chevron%403x.png",
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/back-chevron%401x.png",
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/back-chevron%402x.png",
+            "https://raw.githubusercontent.com/xmartlabs/Eureka/master/Source/Resources/Eureka.bundle/back-chevron%403x.png",
+        ]
+        .compactMap({ URL(string: $0) })
+        
+        let fileNames: [String] = [
+            "forward-chevron@1x.png",
+            "forward-chevron@2x.png",
+            "forward-chevron@3x.png",
+            "back-chevron@1x.png",
+            "back-chevron@2x.png",
+            "back-chevron@3x.png",
+        ]
+        
+        let zipped = zip(fileNames, urls)
+        
+        return Dictionary(uniqueKeysWithValues: zipped)
+    }
+}
+#endif

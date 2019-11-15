@@ -5,7 +5,7 @@
 //  Created by Mathias Claassen on 3/15/18.
 //  Copyright © 2018 Xmartlabs. All rights reserved.
 //
-
+import UIKit
 import CoreLocation
 import Eureka
 
@@ -16,9 +16,9 @@ class RowsExampleViewController: FormViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        URLRow.defaultCellUpdate = { cell, row in cell.textField.textColor = .blue }
-        LabelRow.defaultCellUpdate = { cell, row in cell.detailTextLabel?.textColor = .orange  }
-        CheckRow.defaultCellSetup = { cell, row in cell.tintColor = .orange }
+        URLRow.defaultCellUpdate = { cell, row in cell.textField.textColor = .systemBlue }
+        LabelRow.defaultCellUpdate = { cell, row in cell.detailTextLabel?.textColor = .systemOrange  }
+        CheckRow.defaultCellSetup = { cell, row in cell.tintColor = .systemOrange }
         DateRow.defaultRowInitializer = { row in row.minimumDate = Date() }
 
         form +++
